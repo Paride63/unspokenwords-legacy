@@ -8,7 +8,10 @@ import CookiePage from './pages/CookiePage'
 const uid = () => crypto.randomUUID()
 
 const FREE_MEMORY_LIMIT = 2
-const ADMIN_EMAIL = 'papiedo@gmail.com'
+const ADMIN_EMAILS = [
+  'papiedo@gmail.com',
+  'edoboccelari@gmail.com'
+]
 
 function safeJsonParse(value, fallback) {
   if (!value) return fallback
@@ -1153,7 +1156,9 @@ export default function App() {
   const [session, setSession] = useState(null)
   const [authLoading, setAuthLoading] = useState(true)
 
-  const isOwner = (session?.user?.email || '').toLowerCase() === ADMIN_EMAIL.toLowerCase()
+  const isOwner = ADMIN_EMAILS.includes(
+  (session?.user?.email || '').toLowerCase()
+)
   const isLimitReached = !isOwner && memories.length >= FREE_MEMORY_LIMIT
 
   useEffect(() => {
