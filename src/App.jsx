@@ -10,7 +10,7 @@ const uid = () => crypto.randomUUID()
 const FREE_MEMORY_LIMIT = 2
 const ADMIN_EMAILS = [
   'papiedo@gmail.com',
-  'edoboccelari@gmail.com'
+  'edoboccellari@gmail.com'
 ]
 
 function safeJsonParse(value, fallback) {
