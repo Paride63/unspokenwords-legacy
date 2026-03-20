@@ -1,3 +1,4 @@
+// force deploy
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { supabase } from './supabaseClient'
 import LegalPage from './pages/LegalPage'
